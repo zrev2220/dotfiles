@@ -1,0 +1,16 @@
+set number
+set relativenumber
+
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set ai
+set si
+set incsearch
+
+filetype plugin on
+syntax on
+
+set colorcolumn=80,120
+highlight ColorColumn ctermbg=DarkGray
