@@ -115,14 +115,6 @@ source $ZSH/oh-my-zsh.sh
 
 export PAGER="less -F -X"
 
-# custom window title (doesn't work with omz unless you set DISABLE_AUTO_TITLE)
-function title {
-    # call `title "my title"` to set the title to a constant value
-    # call `title` with no arguments to reset it to the dynamic value below
-    WINDOW_TITLE="$@"
-}
-PROMPT_COMMAND="echo -ne \"\033]0;\${WINDOW_TITLE:-\$(basename \"\${PWD}\")}\007\""
-
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -144,6 +136,9 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 # completion for my custom glb script
 source ~/.local/share/zhayes/glb/glb-completion.sh
+
+# configure git credential manager
+export GCM_CREDENTIAL_STORE=gpg
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
