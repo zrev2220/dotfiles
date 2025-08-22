@@ -8,6 +8,7 @@ set tabstop=4
 set ai
 set si
 set incsearch
+set hlsearch
 
 filetype plugin on
 syntax on
