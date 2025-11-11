@@ -31,6 +31,7 @@ alias vpndown='openvpn3 session-manage --config zhayes --disconnect'
 # misc
 alias sa='alias | rg'
 alias img='chafa -f kitty'
+alias bel='echo -e -n "\07"'
 
 glb () {
   # print issues for a GitLab user, grouped by workflow::* label
