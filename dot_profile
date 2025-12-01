@@ -55,5 +55,6 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin"
 export JAVA_HOME="$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/jbr"
 export PATH="$PATH:$JAVA_HOME/bin"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/plugins/Kotlin/kotlinc/bin"
 
 export CAPACITOR_ANDROID_STUDIO_PATH="$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
