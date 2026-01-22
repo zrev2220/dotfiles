@@ -5,6 +5,7 @@ alias getverb='jq -r '"'"'"\(.version) (\(.buildNo))"'"'"' package.json'
 # pnpm
 alias pi='pnpm i'
 alias px='pnpm nx'
+alias pxm='pnpm nx run-many -t'
 alias pionic='pnpm -F mobile exec ionic'
 # poetry
 alias getverp='poetry version -s'
