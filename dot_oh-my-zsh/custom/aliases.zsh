@@ -12,8 +12,9 @@ alias getverp='poetry version -s'
 alias poi='poetry install'
 # uv
 alias us='uv sync'
-# pre-commit
+# pre-commit / prek
 alias pc='pre-commit run --all-files'
+alias pk='prek run --all-files'
 # git
 alias commitver='git commit -am "chore: $(getver)"'
 alias commitverb='git commit -am "chore: $(getver) (build $(jq -r .buildNo package.json))"'
