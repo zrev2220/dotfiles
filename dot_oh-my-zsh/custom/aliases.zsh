@@ -37,30 +37,3 @@ alias bel='echo -e -n "\07"'
 if command -v xclip > /dev/null; then
   alias clp='xclip -sel clip'
 fi
-
-glb () {
-  # print issues for a GitLab user, grouped by workflow::* label
-  user=$1
-
-  reset="\e[0m"
-  labels=(
-    "workflow::backlog"
-    "workflow::to-do"
-    "workflow::doing"
-    "workflow::review"
-  )
-  labelColors=(
-    "\e[40m"
-    "\e[30;43m"
-    "\e[30;42m"
-    "\e[30;44m"
-  )
-
-  echo
-  for ((i = 1; i <= $#labels; i++)); do
-    label=${labels[$i]}
-    labelColor=${labelColors[$i]}
-    echo -e "${labelColor}${label}${reset}\n"
-    glab issue list -g vs -a $user -l $label
-  done
-}
