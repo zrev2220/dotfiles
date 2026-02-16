@@ -25,6 +25,7 @@ alias gitpushtags='git push && git push --tags'
 alias gitbranchsa='for branch in $(git branch -r | grep -v HEAD);do git show --color --no-patch --format="%an~%ai~%ar~%C(yellow)%h%Creset~%S" $branch; done | sort | column -s "~" -t'
 alias gitbranchsd='for branch in $(git branch -r | grep -v HEAD);do git show --color --no-patch --format="%ai~%ar~%an~%C(yellow)%h%Creset~%S" $branch; done | sort | column -s "~" -t'
 alias gsubl='GIT_EDITOR="subl -w"'
+alias gbb='git branch -v | grep -P '"'"'behind \d+\]'"'"
 # vs cli
 alias vsgt='vs get-token | tee /dev/tty | xclip -sel clip'
 # vpn
