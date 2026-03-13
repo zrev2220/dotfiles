@@ -48,3 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Toolbox App
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+
+if command -v rustup > /dev/null; then
+    . "$HOME/.cargo/env"
+fi
