@@ -1,3 +1,10 @@
+# misc
+alias sa='alias | rg'
+alias img='chafa -f kitty'
+alias bel='echo -e -n "\07"'
+if command -v xclip > /dev/null; then
+  alias clp='xclip -sel clip'
+fi
 # npm
 alias npmversion='npm version --no-git-tag-version'
 alias getver='jq -r .version package.json'
@@ -27,14 +34,7 @@ alias gitbranchsd='for branch in $(git branch -r | grep -v HEAD);do git show --c
 alias gsubl='GIT_EDITOR="subl -w"'
 alias gbb='git branch -v | grep -e '"'"'behind [0-9]\+\]'"'"
 # vs cli
-alias vsgt='vs get-token | tee /dev/tty | xclip -sel clip'
+alias vsgt='vs get-token | tee /dev/tty | clp'
 # vpn
 alias vpnup='openvpn3 session-start --config zhayes'
 alias vpndown='openvpn3 session-manage --config zhayes --disconnect'
-# misc
-alias sa='alias | rg'
-alias img='chafa -f kitty'
-alias bel='echo -e -n "\07"'
-if command -v xclip > /dev/null; then
-  alias clp='xclip -sel clip'
-fi
